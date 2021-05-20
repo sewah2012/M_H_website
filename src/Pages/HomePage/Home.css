@@ -1,0 +1,69 @@
+.home__topBanner{
+	position: relative;
+	width: 100vw;
+}
+
+
+.home__topBanner-text{
+	position: absolute;
+	bottom: 10rem;
+	left: 10vw;
+	/* right: 50vw; */
+	color: #0061a8;
+	/* background-color: gray; */
+	padding: 1rem;
+	/* opacity: .5; */
+}
+
+.home__topBanner-text >h1{
+	opacity: 1;
+	font-size: 2.5rem;
+	margin-bottom: 1rem;
+}
+
+/* home about section */
+.home__about{
+	padding: 5rem 10rem;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+
+}
+
+.home__about >img{
+	width: 20rem;
+	height: 20rem;
+	object-fit: contain;
+}
+.home__about-content{
+	flex: 1;
+	margin-left:5rem;
+}
+
+.home__about-content>h2{
+	
+}
+
+/* home servicess */
+.home__services{
+	/* background-color: #005792; */
+	/* color: white; */
+	padding: 5rem 10rem;
+	text-align: center;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+}
+.home__services-content {
+		/* width: 30rem; */
+		flex: 1;
+		width:60%;
+		
+}
+
+.home__services-items{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}

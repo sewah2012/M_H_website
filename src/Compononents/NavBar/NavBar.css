@@ -3,7 +3,7 @@
 	flex-wrap: wrap;
 	justify-content: space-between;
 	padding: .1rem;
-	background-color: #005792;;
+	background-color: #005792;
 	align-items: center;
 }
 
@@ -37,6 +37,8 @@
 	font-size: 1.5rem;
 	/* border-right: 2px solid #eb5e0b;
 	border-left: 2px solid #eb5e0b; */
+	background-size: c;
+	
 }
 
 .navBar__menu-item:hover{
@@ -50,5 +52,6 @@
 .navBar__menu-item:active{
 	{
 		border-bottom: 2px solid #eb5e0b;
+	
 	}
 }
