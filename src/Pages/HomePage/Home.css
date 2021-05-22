@@ -1,6 +1,6 @@
 .home__topBanner{
 	position: relative;
-	width: 100vw;
+	/* width:; */
 }
 
 
@@ -67,3 +67,85 @@
 	flex-wrap: wrap;
 	justify-content: center;
 }
+
+/* clients  */
+.home__clients{
+	padding: 5rem 10rem;
+	text-align: center;
+
+}
+
+.home__clients img{
+	width: 10rem;
+	height: 10rem;
+	object-fit: contain;
+	transition: all .2s ease-out;
+}
+
+.home__clients img:hover{
+	transform: scale(1.2);
+  opacity: .5;
+  cursor: pointer;
+ 
+}
+
+
+.home__clients-logos{
+	height: 150px;
+  	width: 70vw;
+  	border: 2px solid #eee;
+  	overflow: hidden;
+  	box-sizing: border-box;
+  	position: relative;
+	/* background-color: #0061a8; */
+}
+.clients{
+	list-style:none;
+	display: flex;
+	width: 200%;
+	margin: 1rem 0;
+	position: absolute;
+	animation: marquee 20s linear infinite;
+	/* background-color: yellow; */
+}
+
+.clients:hover{
+	animation-play-state: paused;
+}
+
+.client {
+	width: 50%;
+  }
+
+  @keyframes marquee {
+	0% { left: 0; }
+	100% { left: -100%; }
+  }
+
+
+  /* home contact */
+  #homeContact{
+	  background-color: #d8e3e7;
+	
+  }
+
+  .home__contact-info{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+  }
+  .home__contact{
+	  display: flex;
+	  flex-wrap: wrap;
+	  justify-content: space-between;
+	  /* width: 100%; */
+  }
+  .home__contact-form{
+	  width: 50%;
+  }
+
+  .home__contact-map{
+	width: 40%;
+	border: 1px solid red;
+  }
+
