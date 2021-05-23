@@ -6,160 +6,105 @@ import Service from '../../Compononents/services/Service'
 import ContactForm from '../../Compononents/ContactForm/ContactForm'
 
 // icons
-import LocationOnIcon from '@material-ui/icons/LocationOn';
-import PhoneIcon from '@material-ui/icons/Phone';
-import EmailIcon from '@material-ui/icons/Email';
+import LocationOnIcon from '@material-ui/icons/LocationOn'
+import PhoneIcon from '@material-ui/icons/Phone'
+import EmailIcon from '@material-ui/icons/Email'
+import Footer from '../../Compononents/Footer/Footer'
+
+import { data } from '../../DataSources/data'
+import { truncate } from '../../utility/util'
 const Home = () => {
-	const styles = {
-		backgroundImage: 'url("assets/images/banner1.jpg")',
-		backgroundRepeat: 'no-repeat',
-		backgroundSize: 'cover',
-		bacgroundColor: 'blue',
-		// width: '100v',
-		height: '600px',
+  const styles = {
+    backgroundImage: 'url("assets/images/banner1.jpg")',
+    backgroundRepeat: 'no-repeat',
+    backgroundSize: 'cover',
+    bacgroundColor: 'blue',
+    // width: '100v',
+    height: '600px',
+  }
 
+  return (
+    <div className="home">
+      <NavBar />
+      <section style={styles} className="home__topBanner">
+        <div className="home__topBanner-text">
+          <h1>Welcome to M and H Global Services </h1>
+          <Button
+            variant="contained"
+            color="secondary"
+            // style={{width: '10rem', height: '5rem'}}
+          >
+            Discover-us
+          </Button>
+        </div>
+      </section>
 
-	}
+      <section className="home__about">
+        <img src="assets/images/businessAnalysis.svg" alt="abt_home" />
+        <div className="home__about-content">
+          <h2>About - us </h2>
+          <p>{truncate(data.about.about_company, 10)}</p>
+          <Button variant="outlined" color="primary">
+            {' '}
+            see more ...
+          </Button>
+        </div>
+      </section>
 
-	return (
-		<div className='home'>
-			<NavBar />
-			<section style={styles} className='home__topBanner' >
-				<div className='home__topBanner-text'>
-					<h1>Welcome to M and H Global Services </h1>
-					<Button
-						variant='contained'
-						color='secondary'
-					// style={{width: '10rem', height: '5rem'}}
-					>
-						Discover-us
+      <section className="home__services">
+        <div className="home__services-content">
+          <h2>A votre service</h2>
+          <p>{data.services.intro}</p>
+        </div>
+        <div className="home__services-items">
+          {data.services.list_services.map((service, index) => (
+            <Service
+              key={index}
+              sDescription={service.sDescription}
+              sTitle={service.sTitle}
+              sEmblem={service.sEmblem}
+            />
+          ))}
+        </div>
+      </section>
 
-					</Button>
-				</div>
-			</section>
+      <section className="home__clients">
+        <h2>nos références clients</h2>
+        <div className="home__clients-logos">
+          <ul className="clients">
+            {data.clientsRef.map((client, index) => (
+              <li className="client" key={index}>
+                <a href={client.website} target="_bank">
+                  <img src={client.clientLogoUrl} alt={client.name} />
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </section>
 
-			<section className='home__about'>
-				<img src='assets/images/businessAnalysis.svg' alt='abt_home' />
-				<div className='home__about-content'>
-					<h2>About - us </h2>
-					<p>Lorem ipsum dolor sit amet,
-					consectetur adipiscing elit.
-					Nulla congue nunc ut nulla placerat
-					sollicitudin. Proin feugiat fermentum
-					ipsum, eget congue lacus viverra ut. Donec venenatis mauris in ultricies rutrum.
-					Nullam blandit ut magna sit amet ornare.
-					Integer ullamcorper euismod lacinia. Curabitur id tempus elit. Orci varius natoque penatibus
-					et magnis dis parturient montes, nascetur ridiculus mus. Vestibulum et tellus
-					et est convallis malesuada ut vel magna.
-					</p>
-					<Button variant='outlined' color='primary'> see more ...</Button>
-				</div>
-			</section>
+      <section id="homeContact">
+        <div className="home__contact-info">
+          <h2> Contact Information </h2>
+          <p>Rendez vous chez nous: </p>
+          <LocationOnIcon />
+          <p>{data.contact.address} </p> <PhoneIcon />{' '}
+          <a href={`tel:${data.contact.telephone}`}>{data.contact.telephone}</a>{' '}
+          <EmailIcon />{' '}
+          <a href={`mailto:${data.contact.email}`}>{data.contact.email}</a>
+        </div>
+        <div className="home__contact">
+          <div className="home__contact-form">
+            <ContactForm />
+          </div>
 
-			<section className='home__services'>
-				<div className='home__services-content'>
-					<h2>A votre service</h2>
-					<p>
+          <div className="home__contact-map">MAP</div>
+        </div>
+      </section>
 
-						Integer ullamcorper euismod lacinia. Curabitur id tempus elit. Orci varius natoque penatibus
-						et magnis dis parturient montes, nascetur ridiculus mus. Vestibulum et tellus
-				</p>
-				</div>
-				<div className='home__services-items'>
-					<Service
-						sDescription='Integer ullamcorper euismod lacinia. Curabitur id tempus elit. Orci varius natoque penatibus 
-						et magnis dis parturient montes, nascetur ridiculus mus. Vestibulum et tellus '
-						sTitle='Creation de Site Web'
-						sEmblem='assets/images/services.svg'
-					/>
-					<Service
-						sDescription='Integer ullamcorper euismod lacinia. Curabitur id tempus elit. Orci varius natoque penatibus 
-						et magnis dis parturient montes, nascetur ridiculus mus. Vestibulum et tellus '
-						sTitle='Creation de Site Web'
-						sEmblem='assets/images/services.svg'
-					/>
-					<Service
-						sDescription='Integer ullamcorper euismod lacinia. Curabitur id tempus elit. Orci varius natoque penatibus 
-						et magnis dis parturient montes, nascetur ridiculus mus. Vestibulum et tellus '
-						sTitle='Creation de Site Web'
-						sEmblem='assets/images/services.svg'
-					/>
-				</div>
-
-			</section>
-
-			<section className='home__clients'>
-				<h2>nos références clients</h2>
-				<div className='home__clients-logos'>
-					<ul className='clients'>
-						<li className='client'>
-							<a href='#' target='_bank'>
-								<img src='assets/images/client.jpg' alt='client' />
-							</a>
-						</li>
-						<li className='client'>
-							<a href='#' target='_bank'>
-								<img src='assets/images/client.jpg' alt='client' />
-							</a>
-						</li>
-						<li className='client'>
-							<a href='#' target='_bank'>
-								<img src='assets/images/client.jpg' alt='client' />
-							</a>
-						</li>
-						<li className='client'>
-							<a href='#' target='_bank'>
-								<img src='assets/images/client.jpg' alt='client' />
-							</a>
-						</li>
-						<li className='client'>
-							<a href='#' target='_bank'>
-								<img src='assets/images/client.jpg' alt='client' />
-							</a>
-						</li>
-						<li className='client'>
-							<a href='#' target='_bank'>
-								<img src='assets/images/client.jpg' alt='client' />
-							</a>
-						</li>
-						<li className='client'>
-							<a href='#' target='_bank'>
-								<img src='assets/images/client.jpg' alt='client' />
-							</a>
-						</li>
-						<li className='client'>
-							<a href='#' target='_bank'>
-								<img src='assets/images/client.jpg' alt='client' />
-							</a>
-						</li>
-					</ul>
-				</div>
-
-			</section>
-
-
-			<section id='homeContact'>
-
-				<div className='home__contact-info'>
-					<h2> Contact Information </h2>
-					<p>Rendez vous chez nous: </p>
-					<LocationOnIcon /><p>Rabat, Medina - Morocco </p> <PhoneIcon /> <a href='tel:+212632952071'>+212 632 952 071</a> <EmailIcon /> <a href='' >sewah2012@gmail.com</a>
-				</div>
-				<div className='home__contact'>
-					<div className='home__contact-form'>
-						<ContactForm />
-					</div>
-
-					<div className='home__contact-map'>
-						MAP
-					</div>
-				</div>
-			</section>
-
-			<h1>footer </h1>
-
-		</div >
-	)
+      <Footer />
+    </div>
+  )
 }
 
 export default Home

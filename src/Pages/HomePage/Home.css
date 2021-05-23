@@ -47,13 +47,15 @@
 
 /* home servicess */
 .home__services{
-	/* background-color: #005792; */
+	/* background-color: whitesmoke; */
 	/* color: white; */
 	padding: 5rem 10rem;
 	text-align: center;
 	display: flex;
 	align-items: center;
 	flex-direction: column;
+	box-shadow: 5px 10px 20px whitesmoke inset;
+
 }
 .home__services-content {
 		/* width: 30rem; */
@@ -129,11 +131,20 @@
 	
   }
 
+
   .home__contact-info{
 	display: flex;
 	flex-direction: column;
 	align-items: center;
   }
+
+  .home__contact-info a{
+	color: red;
+  }
+  .home__contact-info a:hover{
+	text-decoration: underline;
+  }
+
   .home__contact{
 	  display: flex;
 	  flex-wrap: wrap;

@@ -1,0 +1,47 @@
+#footer{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+
+}
+
+#footer a{
+	color: red;
+	cursor: pointer;
+}
+
+.footer__col1 >img{
+	width: 10rem;
+}
+
+.footer__col2 h2{
+	text-align: left;
+}
+.footer__col2 li{
+	color: #0061a8;
+	padding: .5rem 0;
+	font-size: 1.2rem;
+	
+}
+.footer__col2 a:hover{
+	color: red;
+	text-decoration: underline;
+}
+
+.footer__col3{
+	display: flex;
+	flex-direction: column;
+}
+
+#copywrite{
+	background-color: black;
+	color: whitesmoke;
+	padding-top: 2rem;
+	padding-bottom: 2rem;
+	font-size: 1.2rem;
+	text-align: center;
+}
+
+#copywrite a{
+	color: #0061a8;
+}
