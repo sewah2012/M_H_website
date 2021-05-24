@@ -12,7 +12,13 @@ const Footer = () => {
     <>
       <section id="footer">
         <div className="footer__col1">
-          <img src="assets/images/logo.jpg" alt="logo" />
+          <Link to="/">
+            <img
+              className="footer__col1-lg"
+              src="assets/images/logo.jpg"
+              alt="logo"
+            />
+          </Link>
           <p>Rendez vous chez nous: </p>
           <LocationOnIcon />
           <p>Rabat, Medina - Morocco </p> <PhoneIcon />{' '}

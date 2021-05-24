@@ -5,6 +5,9 @@ import { Button } from '@material-ui/core'
 import Service from '../../Compononents/services/Service'
 import ContactForm from '../../Compononents/ContactForm/ContactForm'
 
+// animation
+import Zoom from 'react-reveal/Zoom'
+import Jump from 'react-reveal/Jump'
 // icons
 import LocationOnIcon from '@material-ui/icons/LocationOn'
 import PhoneIcon from '@material-ui/icons/Phone'
@@ -13,6 +16,7 @@ import Footer from '../../Compononents/Footer/Footer'
 
 import { data } from '../../DataSources/data'
 import { truncate } from '../../utility/util'
+import { Link } from 'react-router-dom'
 const Home = () => {
   const styles = {
     backgroundImage: 'url("assets/images/banner1.jpg")',
@@ -41,14 +45,18 @@ const Home = () => {
 
       <section className="home__about">
         <img src="assets/images/businessAnalysis.svg" alt="abt_home" />
-        <div className="home__about-content">
-          <h2>About - us </h2>
-          <p>{truncate(data.about.about_company, 10)}</p>
-          <Button variant="outlined" color="primary">
-            {' '}
-            see more ...
-          </Button>
-        </div>
+        <Jump cascade>
+          <div className="home__about-content">
+            <h2>About - us </h2>
+
+            <p>{truncate(data.about.about_company, 10)}</p>
+
+            <Button variant="outlined" color="primary">
+              {' '}
+              <Link to="/about"> see more ...</Link>
+            </Button>
+          </div>
+        </Jump>
       </section>
 
       <section className="home__services">
@@ -56,14 +64,17 @@ const Home = () => {
           <h2>A votre service</h2>
           <p>{data.services.intro}</p>
         </div>
+
         <div className="home__services-items">
           {data.services.list_services.map((service, index) => (
-            <Service
-              key={index}
-              sDescription={service.sDescription}
-              sTitle={service.sTitle}
-              sEmblem={service.sEmblem}
-            />
+            <Zoom>
+              <Service
+                key={index}
+                sDescription={service.sDescription}
+                sTitle={service.sTitle}
+                sEmblem={service.sEmblem}
+              />{' '}
+            </Zoom>
           ))}
         </div>
       </section>

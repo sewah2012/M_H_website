@@ -1,0 +1,40 @@
+.about{
+	width: 80%;
+	margin: auto;
+	text-align: center;
+}
+.about__content{
+	padding:5rem 0;
+	width:60%;
+	margin: auto;
+	/* text-align: center; */
+}
+
+.about__content >p{
+	color: grey;
+}
+
+/* staff */
+.about__staff{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	padding-top: 1rem;
+}
+.about__equipe{
+	width: 20rem;
+	
+}
+.about__equipe >p{
+	text-align: center;
+}
+.about__equipe >img{
+	border-radius: 80%;
+	width: 100%;
+	transition: .5s;
+}
+.about__equipe>img:hover {
+	
+	cursor: pointer;
+	transform: scale(1.2, 1.2);
+}

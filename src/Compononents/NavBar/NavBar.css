@@ -49,9 +49,9 @@
 	border-bottom: 2px solid #eb5e0b;
 }
 
-.navBar__menu-item:active{
+.navBar__menu-item:active
 	{
-		border-bottom: 2px solid #eb5e0b;
+		border-bottom: 3px solid #eb5e0b;
 	
 	}
-}
+

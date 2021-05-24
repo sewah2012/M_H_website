@@ -3,6 +3,27 @@ export const data = {
   about: {
     about_company:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Null congue nunc ut nulla placerat sollicitudin. Proin feugiat fermentum	  ipsum, eget congue lacus viverra ut. Donec venenatis mauris in ultricies rutrum.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Null congue nunc ut nulla placerat sollicitudin. Proin feugiat fermentum	  ipsum, eget congue lacus viverra ut. Donec venenatis mauris in ultricies rutrum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Null congue nunc ut nulla placerat sollicitudin. Proin feugiat fermentum	  ipsum, eget congue lacus viverra ut. Donec venenatis mauris in ultricies rutrum.',
+    equpie: [
+      {
+        name: '',
+        role: '',
+        linkedin: '',
+        facebook: '',
+        email: '',
+        phone: '',
+        photoUrl: '',
+      },
+
+      {
+        name: '',
+        role: '',
+        linkedin: '',
+        facebook: '',
+        email: '',
+        phone: '',
+        photoUrl: '',
+      },
+    ],
   },
   services: {
     intro:

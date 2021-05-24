@@ -5,9 +5,12 @@ import './NavBar.css'
 const NavBar = () => {
   return (
     <div className="navBar">
-      <div className="navBar__brand">
-        <img src="assets/images/logo.jpg" alt="brand" />
-      </div>
+      <Link to="/">
+        {' '}
+        <div className="navBar__brand">
+          <img src="assets/images/logo.jpg" alt="brand" />
+        </div>
+      </Link>
 
       <div className="navBar__menu">
         <ul className="navBar__menu-items">

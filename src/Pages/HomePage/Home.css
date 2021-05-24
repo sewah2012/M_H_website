@@ -31,9 +31,13 @@
 
 }
 
+.home__about-content > p{
+	color: grey;
+}
+
 .home__about >img{
-	width: 20rem;
-	height: 20rem;
+	width: 50rem;
+	height: 50rem;
 	object-fit: contain;
 }
 .home__about-content{
