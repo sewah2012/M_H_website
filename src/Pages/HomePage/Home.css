@@ -129,38 +129,9 @@
   }
 
 
-  /* home contact */
-  #homeContact{
-	  background-color: #d8e3e7;
-	
-  }
-
-
-  .home__contact-info{
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-  }
-
-  .home__contact-info a{
-	color: red;
-  }
-  .home__contact-info a:hover{
-	text-decoration: underline;
-  }
-
-  .home__contact{
-	  display: flex;
-	  flex-wrap: wrap;
-	  justify-content: space-between;
-	  /* width: 100%; */
-  }
-  .home__contact-form{
-	  width: 50%;
-  }
-
-  .home__contact-map{
-	width: 40%;
-	border: 1px solid red;
-  }
-
+  
+/* home contacts */
+#homeContact{
+	background-color: #d8e3e7;
+  
+}

@@ -3,20 +3,18 @@ import React from 'react'
 import NavBar from '../../Compononents/NavBar/NavBar'
 import { Button } from '@material-ui/core'
 import Service from '../../Compononents/services/Service'
-import ContactForm from '../../Compononents/ContactForm/ContactForm'
 
 // animation
 import Zoom from 'react-reveal/Zoom'
 import Jump from 'react-reveal/Jump'
 // icons
-import LocationOnIcon from '@material-ui/icons/LocationOn'
-import PhoneIcon from '@material-ui/icons/Phone'
-import EmailIcon from '@material-ui/icons/Email'
+
 import Footer from '../../Compononents/Footer/Footer'
 
 import { data } from '../../DataSources/data'
 import { truncate } from '../../utility/util'
 import { Link } from 'react-router-dom'
+import ContactSection from '../../Compononents/ContactSection/ContactSection'
 const Home = () => {
   const styles = {
     backgroundImage: 'url("assets/images/banner1.jpg")',
@@ -66,7 +64,7 @@ const Home = () => {
         </div>
 
         <div className="home__services-items">
-          {data.services.list_services.map((service, index) => (
+          {data.services.list_services.slice(0, 4).map((service, index) => (
             <Zoom>
               <Service
                 key={index}
@@ -77,6 +75,9 @@ const Home = () => {
             </Zoom>
           ))}
         </div>
+        <Button variant="contained" color="primary" fontSize="large">
+          <Link to="/services">Voir Plus de notres services </Link>
+        </Button>
       </section>
 
       <section className="home__clients">
@@ -93,24 +94,8 @@ const Home = () => {
           </ul>
         </div>
       </section>
-
       <section id="homeContact">
-        <div className="home__contact-info">
-          <h2> Contact Information </h2>
-          <p>Rendez vous chez nous: </p>
-          <LocationOnIcon />
-          <p>{data.contact.address} </p> <PhoneIcon />{' '}
-          <a href={`tel:${data.contact.telephone}`}>{data.contact.telephone}</a>{' '}
-          <EmailIcon />{' '}
-          <a href={`mailto:${data.contact.email}`}>{data.contact.email}</a>
-        </div>
-        <div className="home__contact">
-          <div className="home__contact-form">
-            <ContactForm />
-          </div>
-
-          <div className="home__contact-map">MAP</div>
-        </div>
+        <ContactSection />
       </section>
 
       <Footer />

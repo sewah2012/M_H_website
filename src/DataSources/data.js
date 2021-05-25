@@ -30,42 +30,49 @@ export const data = {
       'Integer ullamcorper euismod lacinia. Curabitur id tempus elit. Orcivarius natoque penatibus et magnis dis parturient montes, nasceturridiculus mus. Vestibulum et tellus',
     list_services: [
       {
+        serviceId: 1,
         sDescription:
           'Integer ullamcorper euismod lacinia. Curabitur id tempus elit. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vestibulum et tellus ',
         sTitle: 'Development Site Web',
         sEmblem: 'assets/images/services.svg',
       },
       {
+        serviceId: 2,
         sDescription:
           'Integer ullamcorper euismod lacinia. Curabitur id tempus elit. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vestibulum et tellus ',
         sTitle: 'Application Mobile',
-        sEmblem: 'assets/images/services.svg',
+        sEmblem: 'assets/images/mobile.svg',
       },
       {
+        serviceId: 3,
         sDescription:
           'Integer ullamcorper euismod lacinia. Curabitur id tempus elit. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vestibulum et tellus ',
         sTitle: 'Application Desktop',
         sEmblem: 'assets/images/services.svg',
       },
       {
+        serviceId: 4,
         sDescription:
           'Integer ullamcorper euismod lacinia. Curabitur id tempus elit. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vestibulum et tellus ',
         sTitle: 'Marketing Digital',
         sEmblem: 'assets/images/services.svg',
       },
       {
+        serviceId: 5,
         sDescription:
           'Integer ullamcorper euismod lacinia. Curabitur id tempus elit. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vestibulum et tellus ',
         sTitle: 'E-commerce',
-        sEmblem: 'assets/images/services.svg',
+        sEmblem: 'assets/images/ecommerce.png',
       },
       {
+        serviceId: 6,
         sDescription:
           'Integer ullamcorper euismod lacinia. Curabitur id tempus elit. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vestibulum et tellus ',
         sTitle: 'System Maintenance & Networking',
-        sEmblem: 'assets/images/services.svg',
+        sEmblem: 'assets/images/sa.jpg',
       },
       {
+        serviceId: 7,
         sDescription:
           'Integer ullamcorper euismod lacinia. Curabitur id tempus elit. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vestibulum et tellus ',
         sTitle: 'Multimedia and Graphic Designs',

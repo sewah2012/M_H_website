@@ -1,0 +1,18 @@
+/* #servicePage a{
+	color: white;
+} */
+.service__item{
+	display: flex;
+	align-items: center;
+	padding: 1rem 0;
+	width: 70%;
+	margin: auto;
+	
+}
+
+.service__item.left {
+	flex-direction: row-reverse;
+}
+.service__item >img{
+	width: 30rem;
+}

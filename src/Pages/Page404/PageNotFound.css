@@ -1,5 +1,6 @@
 #pageNotFound{
 	width: 80%;
+	height: 600px;
 	margin: auto;
 	display: flex;
 	flex-direction: column;
