@@ -3,12 +3,12 @@ import React from 'react'
 import NavBar from '../../Compononents/NavBar/NavBar'
 import Banner from '../../Compononents/Banner/Banner'
 import Footer from '../../Compononents/Footer/Footer'
-import { Link } from 'react-router-dom'
 import { data } from '../../DataSources/data'
-import { Button } from '@material-ui/core'
+import Service from '../../Compononents/services/Service'
+import ContactSection from '../../Compononents/ContactSection/ContactSection'
+import PricingList from '../../Compononents/Pricing/PricingList'
 
 // animations
-import Slide from 'react-reveal/Slide'
 
 const ServicesPage = () => {
   return (
@@ -18,48 +18,20 @@ const ServicesPage = () => {
       <section id="servicePage">
         <h2>Notre services </h2>
         <hr />
-        <div className="service__items">
-          {data.services.list_services.map((service, index) => {
-            if (service.serviceId % 2 === 0) {
-              return (
-                <div className="service__item">
-                  <img src={service.sEmblem} alt={service.sTitle} />
-                  <Slide right>
-                    <div className="service__item-content">
-                      <h2>{service.sTitle}</h2>
-                      <p>{service.sDescription}</p>
-                      <br />
-                      <br />
-                      <Link to="/contact">
-                        <Button variant="contained" color="secondary" fullWidth>
-                          Contact us now
-                        </Button>
-                      </Link>
-                    </div>
-                  </Slide>
-                </div>
-              )
-            } else {
-              return (
-                <div className="service__item left">
-                  <img src={service.sEmblem} alt={service.sTitle} />
-                  <Slide left>
-                    <div className="service__item-content">
-                      <h2>{service.sTitle}</h2>
-                      <p>{service.sDescription}</p>
-                      <br />
-                      <Link to="/contact">
-                        <Button variant="contained" color="primary" fullWidth>
-                          Contact us now
-                        </Button>
-                      </Link>
-                    </div>
-                  </Slide>
-                </div>
-              )
-            }
-          })}
+        <div className="services__list">
+          {data.services.list_services.map((service, index) => (
+            <Service
+              key={index}
+              sTitle={service.sTitle}
+              sDescription={service.sDescription}
+              sEmblem={service.sEmblem}
+            />
+          ))}
         </div>
+      </section>
+      <PricingList />
+      <section>
+        <ContactSection />
       </section>
       <Footer />
     </div>

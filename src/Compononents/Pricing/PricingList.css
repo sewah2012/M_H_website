@@ -1,0 +1,24 @@
+#pricing{
+	text-align: center;
+	}
+	#pricing > p{
+		text-align: center;
+		width: 60%;
+		margin: auto;
+		color: gray;
+	}
+	
+	.pricing__list{
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+
+	@media only screen and (max-width: 800px) {
+		#pricing >p{
+			width: 80%;
+			font-size: .7rem;
+			text-align: justify;
+				
+		}
+	}

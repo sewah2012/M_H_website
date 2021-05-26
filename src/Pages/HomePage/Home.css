@@ -135,3 +135,71 @@
 	background-color: #d8e3e7;
   
 }
+
+@media only screen and (max-width: 800px) {
+	.home__about{
+		padding: 1rem .5rem ;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	
+	}	
+
+	.home__about-content > p{
+		color: grey;
+	}
+	
+	.home__about >img{
+		width: 10rem;
+		height: 10rem;
+		object-fit: contain;
+	}
+	.home__about-content{
+		margin-left:0rem;
+		width: 100%;
+	}
+
+	/* services mobile  */
+	.home__services{
+		/* background-color: whitesmoke; */
+		/* color: white; */
+		padding: 1rem 0.5rem;
+		text-align: center;
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+		box-shadow: 5px 10px 20px whitesmoke inset;
+	
+	}
+	.home__services-content {
+			/* width: 30rem; */
+			flex: 1;
+			width:100%;
+			
+	}
+	
+	.home__services-items{
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+
+	/* references  */
+	/* clients  */
+.home__clients{
+	padding: 1rem .5rem;
+	text-align: center;
+
+}
+	.home__clients-logos{
+		height: 150px;
+		  width: 100%;
+	}
+
+	.home__clients img{
+		width: 5rem;
+		height: 5rem;
+
+	}
+
+}

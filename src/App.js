@@ -6,6 +6,7 @@ import PageNotFound from './Pages/Page404/PageNotFound'
 import ServicesPage from './Pages/ServicesPage/ServicesPage'
 import ScrollToTop from './utility/ScrollToTop'
 import ContactPage from './Pages/ContactPage/ContactPage'
+import PortfolioPage from './Pages/PortfolioPage/PortfolioPage'
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Route path="/about" component={About} />
         <Route path="/services" component={ServicesPage} />
         <Route path="/contact" component={ContactPage} />
+        <Route path="/portfolio" component={PortfolioPage} />
         <Route path="*" exact component={PageNotFound} />
       </Switch>
     </Router>

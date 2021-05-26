@@ -20,9 +20,10 @@ const Footer = () => {
             />
           </Link>
           <p>Rendez vous chez nous: </p>
-          <LocationOnIcon />
-          <p>Rabat, Medina - Morocco </p> <PhoneIcon />{' '}
-          <a href="tel:+212632952071">+212 632 952 071</a> <EmailIcon />{' '}
+          <LocationOnIcon /> <p>Rabat, Medina - Morocco </p> <PhoneIcon />{' '}
+          <a href="tel:+212632952071">+212 632 952 071</a> <br />
+          <br />
+          <EmailIcon />
           <a href="mailto:sewah2012@gmail.com">sewah2012@gmail.com</a>
         </div>
 

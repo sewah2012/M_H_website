@@ -38,3 +38,23 @@
 	cursor: pointer;
 	transform: scale(1.2, 1.2);
 }
+
+@media only screen and (max-width: 800px) {
+	.about{
+		width: 100%;
+		/* margin: auto;
+		text-align: center; */
+	}
+	.about__content{
+		/* padding:1rem .5; */
+		width:80%;
+		margin: auto;
+		/* text-align: center; */
+	}
+
+	.about__equipe >img{
+		border-radius: 80%;
+		width: 60%;
+		transition: .5s;
+	}
+  }

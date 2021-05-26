@@ -1,0 +1,28 @@
+.mobileMenu{
+	padding: 1rem;
+	width: fit-content;
+	background-color: white;
+	opacity: 1;
+}
+
+.mobileMenu__items{
+	list-style: none;
+	text-align: justify;
+}
+
+.mobileMenu__item{
+	color: white;
+	background-color: #344fa1;
+	margin: .5rem;
+	padding: .5rem;
+	width: 15rem;
+	cursor: pointer;
+
+}
+
+.mobileMenu__item:hover{
+	text-decoration: underline;
+	color: #344fa1;
+	background-color: white;
+	border: 1px solid blue;
+}

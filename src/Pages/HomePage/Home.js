@@ -15,6 +15,9 @@ import { data } from '../../DataSources/data'
 import { truncate } from '../../utility/util'
 import { Link } from 'react-router-dom'
 import ContactSection from '../../Compononents/ContactSection/ContactSection'
+import TestimonialsList from '../../Compononents/Testimonials/TestimonialsList'
+import PricingList from '../../Compononents/Pricing/PricingList'
+
 const Home = () => {
   const styles = {
     backgroundImage: 'url("assets/images/banner1.jpg")',
@@ -79,7 +82,7 @@ const Home = () => {
           <Link to="/services">Voir Plus de notres services </Link>
         </Button>
       </section>
-
+      <PricingList />
       <section className="home__clients">
         <h2>nos références clients</h2>
         <div className="home__clients-logos">
@@ -97,7 +100,7 @@ const Home = () => {
       <section id="homeContact">
         <ContactSection />
       </section>
-
+      <TestimonialsList />
       <Footer />
     </div>
   )

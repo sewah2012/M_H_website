@@ -1,3 +1,6 @@
+.menu{
+	position: relative;
+}
 .navBar{
 	display: flex;
 	flex-wrap: wrap;
@@ -53,5 +56,49 @@
 	{
 		border-bottom: 3px solid #eb5e0b;
 	
+}
+
+.mobileMenuBar{
+	display: none;
+}
+
+.mobileMenu{
+	display: none;
+}
+
+
+
+
+/* mobile  */
+@media only screen and (max-width: 800px) {
+	.navBar__menu{
+		display: none;
+	
 	}
+
+	.mobileMenuBar{
+		display: inline;
+	}
+
+	.navBar__brand > img{
+		width: 5rem;
+		height: 4rem;
+		object-fit: contain;
+		margin: 0 1rem;
+	}
+
+	.mobileMenu{
+		display: inline;
+		position: absolute;
+		z-index: 1;
+		left: -100vw;
+		transition: .5s ease;
+		width: 80%;
+	}
+	
+	.mobileMenu.open {
+		left:0;
+	}
+  }
+  
 

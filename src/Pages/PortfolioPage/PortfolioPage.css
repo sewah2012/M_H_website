@@ -1,0 +1,35 @@
+
+.portfolio__item{
+	display: flex;
+	align-items: center;
+	padding: 5rem 0;
+	width: 70%;
+	margin: auto;
+	
+}
+
+.portfolio__item.left {
+	flex-direction: row-reverse;
+}
+.portfolio__item >img{
+	width: 30rem;
+	margin: 0 2rem;
+}
+
+@media only screen and (max-width: 800px) {
+	.portfolio__item{
+		flex-direction: column;
+		padding: 2rem 0;
+		width: 70%;
+		margin: auto;
+		
+	}
+	
+	.portfolio__item.left {
+		flex-direction: column;
+	}
+	.portfolio__item >img{
+		width: 15rem;
+		margin: 0;
+	}
+}
